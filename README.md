@@ -14,3 +14,7 @@
 - 第三方API串接：Google Places API, Geocoding API
 - 版本控制：Git
 
+## 啟動方式
+- 開啟兩個終端機，個別進入frontend，backend 
+- npm start
+- python manage.py runserver
