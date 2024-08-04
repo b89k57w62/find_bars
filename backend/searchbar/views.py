@@ -24,8 +24,8 @@ class PlacesAPIView(APIView):
                     location = geocode_data['results'][0]['geometry']['location']
                     location = f"{location['lat']},{location['lng']}"
         
-        radius = request.query_params.get("radius", 1000)
-
+        radius = request.query_params.get("radius", 1000) # or hardcode radius = 1000
+        
         places_data = fetch_places_data(query, location, radius)
         if places_data and "results" in places_data:
             serializer = PlaceSerializer(data=places_data["results"], many=True)

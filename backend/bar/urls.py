@@ -1,6 +1,6 @@
 from django.contrib import admin
-from django.urls import path, include, re_path
-from django.views.generic import TemplateView
+from django.urls import path, include
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('searchbar.urls'))
